@@ -1,2 +1,11 @@
 # Napi101
-Let's learn N-API (Native API of NodeJS 8.0.0)
+
+## Introduction
+The N-API is a new and better way for creating native module for NodeJS.
+
+## Installation
+```
+npm install
+# have fun with your native module.
+node --napi-modules index.js
+```
