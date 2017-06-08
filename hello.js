@@ -10,4 +10,4 @@
 const hello = require('./build/Release/hello');
 
 console.log(hello.hello);
-hello.hello();
+console.log(hello.hello());
