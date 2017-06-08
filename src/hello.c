@@ -13,11 +13,18 @@
  */
 
 #include <node_api.h>
+#include <stdio.h>
 
-void say_hello(napi_env env, napi_callback_info info)
+
+napi_value say_hello(napi_env env, napi_callback_info info)
 {
-	printf("Hello\n");
-	return;
+	napi_value retval;
+
+	printf("Hello world\n");
+
+	napi_create_number(env, 1373, &retval);
+
+	return retval;
 }
 
 void init(napi_env env, napi_value exports, napi_value module, void* priv)
@@ -66,6 +73,9 @@ void init(napi_env env, napi_value exports, napi_value module, void* priv)
 	 * This method allows the efficient definition of multiple properties on a given object.
 	 */
 	status = napi_define_properties(env, exports, 1, &desc);
+
+	if (status != napi_ok)
+		return;
 }
 
 
