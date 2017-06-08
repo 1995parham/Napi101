@@ -16,7 +16,8 @@
 
 void say_hello(napi_env env, napi_callback_info info)
 {
-	printf("Hello");
+	printf("Hello\n");
+	return;
 }
 
 void init(napi_env env, napi_value exports, napi_value module, void* priv)
