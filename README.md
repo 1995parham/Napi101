@@ -4,7 +4,7 @@
 The N-API is a new and better way for creating native module for NodeJS.
 
 ## Installation
-```
+```sh
 npm install
 # have fun with your native module.
 node --napi-modules index.js
