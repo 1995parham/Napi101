@@ -1,0 +1,11 @@
+{
+  "name": "napi",
+  "version": "1.0.0",
+  "description": "Let's learn N-API (Native API of NodeJS 8.0.0)",
+  "main": "index.js",
+  "repository": "https://github.com/1995parham/Napi101.git",
+  "author": "Parham Alvani <parham.alvani@gmail.com>",
+  "license": "GPL-3.0",
+  "keywords": [],
+  "scripts": {}
+}
