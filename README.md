@@ -9,6 +9,17 @@ based on thing that I can do correctly.
 ## Issues
 1. [N-API Callback Return](https://github.com/nodejs/node/issues/13562)
 
+## Examples
+### Hello
+This module register hello function on hello module. hello function prints `Hello world` on console
+with `printf` and return `1373` from native function into javascript caller.
+```
+hello.js
+src
+ |
+ \ hello.c
+```
+
 ## Installation
 ```sh
 npm install
