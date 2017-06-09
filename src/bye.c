@@ -20,8 +20,9 @@ napi_value bye_sync(napi_env env, napi_callback_info info)
 {
 	napi_value retval;
 
-	sleep(100);
-	printf("Hello sync");
+	printf("Hello sync\n");
+	sleep(1);
+	printf("Bye sync\n");
 
 	napi_create_number(env, 1373, &retval);
 
@@ -30,13 +31,13 @@ napi_value bye_sync(napi_env env, napi_callback_info info)
 
 void bye_async_execute(napi_env env, void *data)
 {
-	sleep(100);
-	printf("Hello async");
+	sleep(1);
+	printf("Hello async\n");
 }
 
 void bye_async_complete(napi_env env, napi_status status, void* data)
 {
-	printf("Hello completed async");
+	printf("Hello completed async\n");
 }
 
 napi_value bye_async(napi_env env, napi_callback_info info)
@@ -51,8 +52,6 @@ napi_value bye_async(napi_env env, napi_callback_info info)
 
 	return retval;
 }
-
-
 
 void init(napi_env env, napi_value exports, napi_value module, void* priv)
 {
