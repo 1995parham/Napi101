@@ -22,12 +22,12 @@ napi_value say_hello(napi_env env, napi_callback_info info)
 
 	printf("Hello world\n");
 
-	napi_create_number(env, 1373, &retval);
+	napi_create_int64(env, 1373, &retval);
 
 	return retval;
 }
 
-void init(napi_env env, napi_value exports, napi_value module, void* priv)
+napi_value init(napi_env env, napi_value exports)
 {
 	napi_status status;
 	napi_property_descriptor desc = {
