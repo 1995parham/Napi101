@@ -75,7 +75,9 @@ napi_value init(napi_env env, napi_value exports)
 	status = napi_define_properties(env, exports, 1, &desc);
 
 	if (status != napi_ok)
-		return;
+		return NULL;
+
+	return exports;
 }
 
 
